@@ -1,0 +1,132 @@
+/* ----START header style ---- */
+.jumbotron {
+    padding: 0rem;
+    background-image: url(/images/header-image2.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 12em;
+}
+
+.storename h1 {
+    font-family: 'Fredericka the Great', cursive;
+    padding: 0.2em 0.5em;
+    margin: 0em;
+    font-size: 4em;
+    width: 50%;
+}
+
+/* ----END header style ---- */
+
+/* -- START search box style --*/
+.search {
+text-align: center;
+
+}
+input {
+width: 20em;
+   
+}
+
+
+/* ----START main container style ---- */
+
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+.flip-box-wrapper {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: flex-start;
+justify-content: center;
+width: 100%;
+padding: 2em 2em;
+
+}
+
+.flip-box {
+    background-color: transparent;
+    border: 1px solid #f1f1f1;
+   /* perspective: 1000px; */
+    /* Remove this if you don't want the 3D effect */
+    margin: 1em 1em;
+    padding: 0.5em;
+    display: flex;
+    width: 280px;
+    height: 400px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+    
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front,
+.flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-box-front img {
+    width: inherit;
+    height: inherit;
+
+}
+
+
+/* Style the back side */
+.flip-box-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the back side words */
+.flip-box-back h3 {
+    text-align: center;
+    color: #222;
+    margin-top: 0.5em;
+    padding: 0.5em;
+   
+}
+
+.flip-box-back p {
+    padding: 0 1em;
+    text-align: justify;
+}
+
+.lang {
+color: red;
+
+}
+
+.info-btn {
+    position: fixed;
+    bottom: 0.5em;
+    right: 0.5em;
+}
+
+.btn-primary {
+background-color: brown;
+}
+
